@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">   
+    <title id="titulo">Estrutura de dados</title>
+</head>
+<body>
+    <div class="sidebar">
+        <button class="btn" onclick="toggleMenu()">Tópicos</button>
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="#Condições - Expressões Relaciona">Condições - Expressões Relaciona</a></li>
+                <li><a href="#Comando IF">Exemplo de IF</a></li>
+                <li><a href="#Comando Else">Exemplo de Else</a></li>
+                <li><a href="#Comando Elif">Exemplo de Elif</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <h1 id="titulo">Comandos de Decisão  </h1>
+
+        <section id="Condições - Expressões Relacionais">
+            <h2>Condições - Expressões Relacionais</h2>
+            <p> Uma condição na linguagem Python é definida como uma expressão que pode ser verdadeira ou falsa.
+                
+                A este tipo de expressão dá-se o nome de expressão relacional ou comparação.
+                
+                Por exemplo,  3 > 2 uma expressão relacional que possui valor verdadeiro. Por outro lado, 4 < 1 é uma expressão  que possui valor falso.
+                
+                Os operadores (< e >) usados nos exemplos acima são chamados de operadores relacionais pois possibilitam saber qual a relação existente entre seus dois operandos. Além destes dois existem mais 4 operadores relacionais, que podem ser vistos na tabela seguir:</p>
+             <meta charset = "UTF-8">
+             <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+             <title>Tabela de Operadores Relacionais</title>
+             <h2>Tabela - Operadores Relacionais</h2>
+             <table>
+                 <tr>
+                     <th>Operador</th>
+                     <th>Descrição</th>
+                 </tr>
+                 <tr>
+                     <td>==</td>
+                     <td>Igual a</td>
+                 </tr>
+                 <tr>
+                     <td>!=</td>
+                     <td>Diferente</td>
+                 </tr>
+                 <tr>
+                     <td>>=</td>
+                     <td>Maior ou igual</td>
+                 </tr>
+                 <tr>
+                     <td>></td>
+                     <td>Maior que</td>
+                 </tr>
+                 <tr>
+                     <td><</td>
+                     <td>Menor que</td>
+                 </tr>
+                 <tr>
+                     <td><=</td>
+                     <td>Menor ou igual</td>
+                 </tr>
+             </table>
+         
+        </section>
+        <section id="Comando IF">
+            <h2>Comando IF</h2>
+            <p>O comando if serve para selecionar que parte de um código será executado.<br><br>
+      
+                Exemplo de If:<br>
+                
+                print("Digite um número:")
+                a = int(input())
+                if (a % 2 == 0) and (a < 100):
+                    print("O número é par e menor do que 100")
+                if (a % 2 == 0) and (a >= 100):
+                    print("O número é par e maior ou igual que 100")
+                if (a % 2 != 0) and (a < 100):
+                    print("O número é ímpar e menor do que 100")
+                if (a % 2 != 0) and (a >= 100):
+                    print("O número é ímpar e maior ou igual que 100")</p>
+
+            <button class="btn" onclick="location.href = 'https://trinket.io/python/d7171c8bb5c9 '" !> Testar Código</button>
+
+        </section>
+        <section id="Comando Else">
+            <h2>Comando Else</h2>
+            <p> Para evitar uma sequência longa de IFs é possível agregar o comando else a um comando if.
+                O trecho apresentado a seguir classifica uma pessoa de acordo com a regra descrita na tabela.<br><br>
+                
+                <title>Tabela de Categorias por Idade</title>
+                <table>
+                    <tr>
+                        <th>Idade</th>
+                        <th>Categoria</th>
+                    </tr>
+                    <tr>
+                        <td>0-1</td>
+                        <td>Recém Nascido</td>
+                    </tr>
+                    <tr>
+                        <td>2-12</td>
+                        <td>Criança</td>
+                    </tr>
+                    <tr>
+                        <td>13-18</td>
+                        <td>Adolescente</td>
+                    </tr>
+                    <tr>
+                        <td>19-60</td>
+                        <td>Adulto</td>
+                    </tr>
+                    <tr>
+                        <td>60-80</td>
+                        <td>Idoso</td>
+                    </tr>
+                    <tr>
+                        <td>>80</td>
+                        <td>Longevo</td>
+                    </tr>
+                </table>
+
+                Exemplo de Else:<br>
+
+                a = input("Digite a idade da pessoa: ")
+                idade = int (a)
+                
+                if idade <=1:
+                    print ("Bebê")
+                else:
+                    if idade < 13: 
+                        print ("Criança")
+                    else:
+                        if idade < 17:
+                            print ("Adolescente")
+                        else:
+                            if idade < 60:
+                                print ("Adulto")
+                            else:
+                                if idade < 80:
+                                    print ("Idoso")
+                                else:
+                                    print ("Longevo")</p>
+
+                    <button class="btn" onclick="location.href = 'https://trinket.io/python/c183b013d46e '" !> Testar Código</button>
+
+        </section>
+        <section id="Comando Elif">
+            <h2>Comando Elif</h2>
+            <p>Quando for necessário fazer um novo teste após um ELSE, como no exemplo anterior, é possível simplificar o comando usando um ELIF.<br><br>
+                Exemplo de Elif:<br>
+
+                valor = input("Digite um valor: ")
+
+                if isinstance(valor, int):
+                    print("É um inteiro")
+                elif isinstance(valor, float):
+                    print("É um float")
+                elif isinstance(valor, str):
+                    print("É uma string")
+                else:
+                    print("Tipo de dado desconhecido")</p>
+
+                    <button class="btn" onclick="location.href = 'https://trinket.io/python/be1bcb8dc3a9 '" !> Testar Código</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
